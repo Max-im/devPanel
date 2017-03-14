@@ -1,0 +1,534 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+
+/*1. HEADER*/
+/*==================================================*/
+
+
+
+
+
+
+/*2. MAIN*/
+/*==================================================*/
+
+
+
+
+
+
+/*3. FOOTER*/
+/*==================================================*/
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+
+/*1. HEADER*/
+/*==================================================*/
+
+
+
+
+
+
+/*2. MAIN*/
+/*==================================================*/
+.main{
+
+.aboutMe{
+	&__selfInfoWrap{
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+	}
+	&__photoWrap{
+		display: inline-block;
+		margin: 0 0 0 10px;
+	}
+	&__photo{
+		width: 150px;
+		height: 150px;
+		box-shadow: 0 2px 3px black;	
+	}
+	&__txtWrap{
+		margin: 0 0 0 10px;
+		line-height: 40px;
+		text-align: left;
+	}
+	&__name{
+		font-size: 22px;
+	}
+	&__socLinks{
+		display: inline-block;
+		li{
+			line-height: 40px;
+			margin: 0 20px 0 0;
+		}
+	}
+}
+
+
+.skills{
+	width: 100%;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		font-size: 14px;
+		margin: 8px 0;
+	}
+	&__link{
+		display: block;
+		padding: 3px 5px;
+		border-radius: 10px;
+		margin: 12px 7px;
+	}
+}
+
+
+
+} /*main*/
+
+
+
+
+/*3. FOOTER*/
+/*==================================================*/
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+
+/*1. HEADER*/
+/*==================================================*/
+.header{
+
+	.topLine{
+		&__wrap{
+			width: 85%;
+			position: relative;
+			&_right{
+				width: 15%;
+			}
+		}
+		&__socMenu{
+			text-align: right;
+			position: absolute;
+			right: 15px;
+			top: -20px;
+		}
+		&__socItem{
+			display: block;
+			vertical-align: middle;
+			display: none;
+			&_hide{
+				display: block;
+			}
+		}
+		&__socLink{
+			padding: 7px 5px;
+		}
+	}
+}
+
+
+
+
+
+
+
+/*2. MAIN*/
+/*==================================================*/
+
+
+
+
+
+
+/*3. FOOTER*/
+/*==================================================*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+
+/*1. HEADER*/
+/*==================================================*/
+
+
+
+
+
+
+/*2. MAIN*/
+/*==================================================*/
+.main{
+.section{
+	padding: 30px 0 40px 0;
+	&__header{
+		font-size: 20px;
+		letter-spacing: 2px;
+		padding: 0 0 10px 0;
+		margin: 0 0 20px 0;
+	}
+}
+
+
+
+
+.aboutMe{
+	&__selfInfoWrap{
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+	}
+	&__photoWrap{
+		display: inline-block;
+		margin: 0 0 0 10px;
+		width: 100%;
+	}
+	&__photo{
+		width: 150px;
+		height: 150px;
+		box-shadow: 0 2px 3px black;	
+	}
+	&__txtWrap{
+		margin: 15px 0 0 10px;
+		line-height: 40px;
+		text-align: left;
+	}
+	&__name{
+		font-size: 22px;
+	}
+	&__socLinks{
+		display: inline-block;
+		li{
+			line-height: 40px;
+			margin: 0 20px 0 0;
+		}
+	}
+}
+
+
+.skills{
+	width: 100%;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		font-size: 14px;
+		margin: 8px 0;
+		width: 33%;
+	}
+	&__link{
+		display: block;
+		padding: 3px 5px;
+		border-radius: 10px;
+		margin: 12px 7px;
+	}
+}
+
+
+
+
+} /*main*/
+
+
+
+
+
+
+/*3. FOOTER*/
+/*==================================================*/
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+
+/*1. HEADER*/
+/*==================================================*/
+
+
+
+
+
+
+/*2. MAIN*/
+/*==================================================*/
+
+
+
+
+
+
+/*3. FOOTER*/
+/*==================================================*/
+
+
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+
+/*1. HEADER*/
+/*==================================================*/
+
+
+
+
+
+
+/*2. MAIN*/
+/*==================================================*/
+
+
+
+
+
+
+/*3. FOOTER*/
+/*==================================================*/
+
+
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+
+/*1. HEADER*/
+/*==================================================*/
+
+
+
+
+
+
+/*2. MAIN*/
+/*==================================================*/
+
+
+
+
+
+
+/*3. FOOTER*/
+/*==================================================*/
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+
+
+/*1. HEADER*/
+/*==================================================*/
+.header{
+	.topLine{
+		&__socItem:not(.topLine__socItem_hide){
+			display: inline-block !important;
+		}
+	}
+}
+
+
+
+
+
+/*2. MAIN*/
+/*==================================================*/
+
+
+
+
+
+
+/*3. FOOTER*/
+/*==================================================*/
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+
+/*1. HEADER*/
+/*==================================================*/
+
+
+
+
+
+
+/*2. MAIN*/
+/*==================================================*/
+
+
+
+
+
+
+/*3. FOOTER*/
+/*==================================================*/
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+
+
+/*1. HEADER*/
+/*==================================================*/
+
+
+
+
+
+
+/*2. MAIN*/
+/*==================================================*/
+
+
+
+
+
+
+/*3. FOOTER*/
+/*==================================================*/
+
+
+
+}
