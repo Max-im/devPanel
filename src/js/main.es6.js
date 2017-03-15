@@ -5,19 +5,48 @@
 	$('.topLine__menuItem').on('click', mainMenuSwitch);
 
 	activeToggle('.aboutMe__selfInfoWrap .fa', 'aboutMe_active')
-	
+	$('.experience__button').on('click', slideAddBlock);	
+
+
+	$('.portfolio__imgWrap').on('mouseover', slidePortfolioOverlay);
 
 
 
 
 
-	function activeToggle( target, classs){
+	function slidePortfolioOverlay(e){
+		let elem = $(this).children('.portfolio__overlay');
+		if(elem.hasClass('active')){
+			elem.addClass('active');
+			elem.slideDown();
+		}
+	}
+
+	function slideAddBlock(e){
+		let elem =	$(this).closest('.experience__item').children('.experience__additionBlock');
+		let btn =	$(this).closest('.experience__item').children('.experience__button');
+		if(elem.hasClass('active')){
+			$(this).closest('.experience__item').css("borderRadius", '5px');
+			elem.removeClass('active');
+			btn.text('Read More');
+			elem.slideUp();
+		}
+		else{
+			$(this).closest('.experience__item').css("borderRadius", '5px 5px 0 0');
+			elem.addClass('active');
+			btn.text('Close');
+			elem.slideDown();
+		}
+	}
+
+
+	function activeToggle( target, myClass){
 		$(target).hover(
 			function(){
-				$(this).addClass(classs);
+				$(this).addClass(myClass);
 			},
 			function(){
-				$(this).removeClass(classs);
+				$(this).removeClass(myClass);
 			}
 		)
 	}

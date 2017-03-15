@@ -114,6 +114,54 @@
 
 
 
+
+
+
+
+
+
+
+/*experience*/
+/*==================================================*/
+.experience{
+	&__jobWrap{
+		width: (100% / 3);
+		font-size: 14px;
+		text-align: center;	
+		padding: 10px;
+	}
+	&__item{
+		padding: 20px 0;
+		border-radius: 10px;
+	}
+	&__job{
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	&__workPlace{
+	}
+	&__timeAmount{
+		border-radius: 10px;
+		padding: 3px 5px;
+		position: relative;
+	}
+	&__button{
+		border-radius: 3px;
+		padding: 5px 10px;
+		margin: 5px auto;
+	}
+	&__additionBlock{
+		line-height: 15px;
+		padding: 10px;
+		display: none;
+	}
+}
+
+
+
+
+
+
 } /*main*/
 
 
@@ -185,10 +233,47 @@
 /*2. MAIN*/
 /*==================================================*/
 
+.main{
+
+/*experience*/
+/*==================================================*/
+.experience{
+	&__jobWrap{
+		width: (100% / 2);
+		font-size: 14px;
+		text-align: center;	
+		padding: 10px;
+	}
+	&__item{
+		padding: 20px 0;
+		border-radius: 10px;
+	}
+	&__job{
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	&__workPlace{
+	}
+	&__timeAmount{
+		border-radius: 10px;
+		padding: 3px 5px;
+		position: relative;
+	}
+	&__button{
+		border-radius: 3px;
+		padding: 5px 10px;
+		margin: 5px auto;
+	}
+	&__additionBlock{
+		line-height: 15px;
+		padding: 10px;
+		display: none;
+	}
+}
 
 
 
-
+}/*main*/
 
 /*3. FOOTER*/
 /*==================================================*/
@@ -289,6 +374,49 @@
 		padding: 3px 5px;
 		border-radius: 10px;
 		margin: 12px 7px;
+	}
+}
+
+
+
+
+
+
+
+
+/*experience*/
+/*==================================================*/
+.experience{
+	&__jobWrap{
+		width: 100%;
+		font-size: 14px;
+		text-align: center;	
+		padding: 10px;
+	}
+	&__item{
+		padding: 20px 0;
+		border-radius: 10px;
+	}
+	&__job{
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	&__workPlace{
+	}
+	&__timeAmount{
+		border-radius: 10px;
+		padding: 3px 5px;
+		position: relative;
+	}
+	&__button{
+		border-radius: 3px;
+		padding: 5px 10px;
+		margin: 5px auto;
+	}
+	&__additionBlock{
+		line-height: 15px;
+		padding: 10px;
+		display: none;
 	}
 }
 

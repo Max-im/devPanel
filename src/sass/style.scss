@@ -185,7 +185,7 @@
 	display: block;
 }
 .section{
-	padding: 50px 0 70px 0;
+	padding: 20px 0 70px 0;
 	&__headerWrap{
 		text-align: center;
 	}
@@ -196,7 +196,7 @@
 		letter-spacing: 2px;
 		color: $accent;
 		padding: 0 0 10px 0;
-		margin: 0 0 40px 0;
+		margin: 30px 0 40px 0;
 		position: relative;
 		&:after{
 			content: '';
@@ -330,7 +330,169 @@
 .experience{
 	background: $myDark;
 	width: 100%;
+	font-size: 0;
+	&__jobWrap{
+		display: inline-block;
+		vertical-align: top;
+		width: 25%;
+		font-size: 14px;
+		text-align: left;
+		box-sizing: border-box;
+		padding: 10px;
+		color: $myLight;
+	}
+	&__item{
+		border: 1px solid lighten($myGray, 30%);
+		padding: 10px 20px;
+		border-radius: 10px;
+		background: $myGray;
+		transition: all .3s;
+		position: relative;
+		box-sizing: border-box;
+		&:hover{
+			transition: all .3s;
+			background: $myGray;
+			border: 1px solid lighten($myGray, 30%);
+		}
+	}
+	&__job{
+		text-transform: uppercase;
+		font-weight: bold;
+		display: inline-block;
+		vertical-align: middle;
+
+	}
+	&__workPlace{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&__timeAmount{
+		display: inline-block;
+		vertical-align: middle;
+		background: $accent;
+		color: $myDark;
+		border-radius: 10px;
+		padding: 3px 5px;
+		border: 1px solid $myDark;
+		position: relative;
+		&:after{
+			content: 'mon.';
+			display: inline-block;
+			background-color: rgba(0,0,0,.0);
+			position: absolute;
+			right: -35px;
+			color: $myLight;
+		}
+	}
+	&__button{
+		background: $accent;
+		border: 1px solid darken($accent, 20%);
+		border-radius: 3px;
+		padding: 5px 10px;
+		display: block;
+		margin: 5px auto;
+		text-transform: capitalize;
+		font-weight: bold;
+		cursor: pointer;
+		transition: all .3s;
+		&:hover{
+			transition: all .3s;
+			background: $myDark;
+			color: $accent;
+			box-shadow: 1px 1px 1px rgba(0,0,0,.4);
+		}
+		&:active{
+			box-shadow: none;	
+		}
+	}
+	&__additionBlock{
+		text-align: justify;
+		line-height: 15px;
+		background: $myGray;
+		position: absolute;
+		padding: 10px;
+		display: none;
+		z-index: 10;
+		top: 100%;
+		left: 0;
+		box-sizing: border-box;
+		border-radius: 0 0 5px 5px;
+		border-left: 1px solid lighten($myGray, 30%);
+		border-right: 1px solid lighten($myGray, 30%);
+		border-bottom: 1px solid lighten($myGray, 30%);
+	}
 }
+
+
+
+
+/*portfolio*/
+/*==================================================*/
+
+.portfolio{
+	font-size: 0;
+	&__controlPanel{
+		text-align: center;
+	}
+	&__controlItem{
+		display: inline-block;
+		font-size: 14px;
+		margin: 0 10px;
+	}
+	&__controlLink{
+		display: block;
+	}
+	&__wrapItem{
+		font-size: 14px;
+		text-align: center;
+		display: inline-block;
+		vertical-align: top;
+		width: (100% / 3);
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	&__item{
+		padding: 20px;
+	}
+	&__imgWrap{
+		width: 100%;
+		height: 200px;
+		display: block;
+		border: 1px solid $myDark;
+		border-radius: 5px;
+		margin: 10px 0 0px 0;
+		overflow: hidden;
+		position: relative;
+	}
+	&__img{
+		display: block;
+		width: 100%;	
+		height: 100%;	
+	}
+	&__overlay{
+		display: block;
+		position: absolute;
+		background: rgba(255,255,255,.3);
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
