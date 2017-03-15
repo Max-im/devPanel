@@ -50,6 +50,7 @@ gulp.task('sass', ['css-libs'], function(){
 gulp.task('css-libs', function(){
 	return gulp.src([
 		'src/libs/fancyBox/source/jquery.fancybox.css', // FancyBox
+		'src/libs/animate.css/animate.min.css', // animate.css
 		'src/libs/OwlCarousel/owl-carousel/owl.carousel.css', // OwlCarousel
 		'src/libs/OwlCarousel/owl-carousel/owl.theme.css', // OwlCarousel
 		'src/libs/OwlCarousel/owl-carousel/owl.transitions.css' // OwlCarousel

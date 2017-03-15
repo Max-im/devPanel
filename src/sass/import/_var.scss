@@ -48,15 +48,13 @@ $myLight: #c0c6cc;
 }
 
 @keyframes tada{
- 0% { transform: scale(1) } 
- 5.55556% { transform:scale(.9) rotate(-4deg) } 
- 11.11111% { transform:scale(.9) rotate(-4deg) } 
- 16.66667% { transform:scale(1.1) rotate(4deg) } 
- 22.22222% { transform:scale(1.1) rotate(-4deg) } 
- 27.77778% { transform:scale(1.1) rotate(4deg) } 
- 33.33333% { transform:scale(1.1) rotate(-4deg) } 
- 38.88889% { transform:scale(1.1) rotate(4deg) } 
- 44.44444% { transform:scale(1) rotate(0) } 
- 100% { transform:scale(1) rotate(0) } 
+ 0% { transform:translate(0,0) } 
+ 6.97675% { transform:translate(5px,0) } 
+ 13.95349% { transform:translate(0,0) } 
+ 20.93023% { transform:translate(5px,0) } 
+ 27.90698% { transform:translate(0,0) } 
+ 34.88372% { transform:translate(5px,0) } 
+ 41.86047% { transform:translate(0,0) } 
+ 100% { transform:translate(0,0) }
 }
 

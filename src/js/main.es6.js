@@ -6,20 +6,37 @@
 
 	activeToggle('.aboutMe__selfInfoWrap .fa', 'aboutMe_active')
 	$('.experience__button').on('click', slideAddBlock);	
-
-
-	$('.portfolio__imgWrap').on('mouseover', slidePortfolioOverlay);
+	slidePortOverlay('.portfolio__imgWrap', '.portfolio__overlay');
 
 
 
 
 
-	function slidePortfolioOverlay(e){
-		let elem = $(this).children('.portfolio__overlay');
-		if(elem.hasClass('active')){
-			elem.addClass('active');
-			elem.slideDown();
-		}
+	function slidePortOverlay(elem, child){
+
+		$(elem).hover(
+			function(){
+				var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+				$(this).find(child).slideDown(function(){
+					$(this).find('.portfolio__linkBlock')
+						.css("display", "block")
+						.addClass('animated fadeInUp');
+					$(this).find('.portfolio__link:first-child')
+						.css("display", "inlineBlock")
+						.addClass('animated bounceInLeft');
+					$(this).find('.portfolio__link:last-child')
+						.css("display", "inlineBlock")
+						.addClass('animated bounceInRight');
+				});
+			},
+			function(){
+				$(this).find(child).slideUp(function(){
+					$(this).find('.portfolio__linkBlock')
+						.css("display", "none")
+						.removeClass('animated fadeInUp');
+				});
+			}
+		);
 	}
 
 	function slideAddBlock(e){
