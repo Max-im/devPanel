@@ -349,14 +349,14 @@
 		border: 1px solid lighten($myGray, 30%);
 		padding: 20px;
 		border-radius: 10px;
-		background: rgba(255,255,255,.1);
+		background: $myGray;
 		transition: all .3s;
 		position: relative;
 		box-sizing: border-box;
 		text-align: center;
 		&:hover{
 			transition: all .3s;
-			background: $myGray;
+			background: darken($myGray, 15%);
 			border: 1px solid lighten($myGray, 30%);
 		}
 	}
@@ -399,17 +399,17 @@
 			vertical-align: top;
 			color: $accent;
 			font-family: "FontAwesome";
+			top: 0;
 			right: -20px;
 			font-size: 16px;
 			font-weight: normal;
 		}
 	}
 	&__button{
-		background: $accent;
-		border: 1px solid darken($accent, 20%);
+		border: 1px solid $accent;
 		border-radius: 3px;
 		padding: 5px 10px;
-		color: $myDark;
+		color: $accent;
 		display: inline-block;
 		vertical-align: top;
 		margin: 20px auto 0px auto;
@@ -456,6 +456,15 @@
 	}
 	&__controlLink{
 		display: block;
+		color: $myGray;
+		text-transform: capitalize;
+		transition: all .3s;
+		font-size: 16px;
+		&:hover{
+			transition: all .3s;
+			color: $myDark;
+			text-decoration: underline;
+		}
 	}
 	&__wrapItem{
 		font-size: 14px;
@@ -468,6 +477,7 @@
 	}
 	&__item{
 		padding: 20px;
+		text-transform: capitalize;
 	}
 	&__imgWrap{
 		width: 100%;
@@ -542,7 +552,30 @@
 .footer{
 	padding: 50px 0;
 	background: $myDark;
+	font-size: 0;
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		width: 25%;
+		font-size: 14px;
+		text-align: right;
+	}
+	&__list{
+		display: block;
+	}
+	&__link{
+		color: $myLight;
+		display: inline-block;
+		margin: 7px;
+		&:hover{
+			color: $accent;
+		}
+		&__nav{
+
+		}
+	}
 }
+
 
 
 
@@ -589,10 +622,10 @@
 	}
 	&:hover{
 		&:after{
-		content: "\f00d";
-		font-family: 'FontAwesome';
-		position: absolute;
-		color: red;
-	}	
+			content: "\f00d";
+			font-family: 'FontAwesome';
+			position: absolute;
+			color: red;
+		}	
 	}
 }
