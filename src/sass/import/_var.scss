@@ -16,6 +16,11 @@ $myLight: #c0c6cc;
 }
 
 
+
+
+/*==================================================*/
+/*labels*/
+/*==================================================*/
 .now{
 	position: relative;
 	&:after{
@@ -24,7 +29,8 @@ $myLight: #c0c6cc;
 		vertical-align: middle;
 		position: absolute;
 		font-size: 12px;
-		background: #df491f;
+		/*background: #f0ad4e;*/
+		background: $accent;
 		color: black;
 		right: -10px;
 		top: -10px;
@@ -34,12 +40,30 @@ $myLight: #c0c6cc;
 	}
 }
 
+.education{
+	position: relative;
+	overflow: hidden;
+	&:after{
+		content: "education";
+		display: inline-block;
+		vertical-align: middle;
+		position: absolute;
+		font-size: 14px;
+		background: #337ab7;
+		transform: rotate(45deg);
+		color: black;
+		right: -50px;
+		top: 20px;
+		padding: 5px 50px;
+		border-radius: 2px;
+		color: $myLight;
+	}
+}
+
 
 
 /*==================================================*/
-
 /*animation*/
-
 /*==================================================*/
 @keyframes spin{
 	0% { transform:rotate(0deg) scale(1.3)} 
