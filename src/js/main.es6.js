@@ -14,7 +14,7 @@
 	});
 	
 
-
+	var mixer = mixitup('.mixItUpWrap');
 
 
 	function slidePortOverlay(elem, child){
