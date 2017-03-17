@@ -77,6 +77,7 @@ gulp.task('libs-js', function() {
 		'src/libs/jquery/jquery-3.1.1.js', //jQuery
 		'src/libs/OwlCarousel/owl-carousel/owl.carousel.js', // jCarousel
 		'src/libs/mixitup2/dist/mixitup.min.js', // mixitup
+		'src/libs/mustache.js/mustache.min.js', // mustache
 		'src/libs/fancyBox/source/jquery.fancybox.js' // FancyBox
 
 

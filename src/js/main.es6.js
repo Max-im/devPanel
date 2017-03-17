@@ -1,4 +1,10 @@
 (function($) {
+	tmplMaker('skills.json', '#skillsTmp', '.tmplSkillsInput');
+	tmplMaker('popup.json', '#popupTmp', '.popupInputTmpl');
+	
+
+
+	var mixer = mixitup('.mixItUpWrap');
 	sliderResizing();
 	$('.topLine__socItem_hide').on('click', menuResizing);
 	$(window).resize(sliderResizing);
@@ -14,11 +20,39 @@
 	});
 	
 
-	var mixer = mixitup('.mixItUpWrap');
+
+
+$(window).scroll( function(){
+	let docHeight = $(document).height();
+	let winHeight = $(window).height();
+	let winTop = $(window).scrollTop();
+
+	$('.section__header').each(
+		function(el){
+			let elTop = $(this).offset().top;
+			if((winTop+winHeight) > elTop && winTop < elTop){
+				$(this).addClass('animated fadeInDown');
+			}else{
+				$(this).removeClass('animated fadeInDown');
+			}
+		}
+	);
+
+
+}
+);
+
+
+	function tmplMaker(jsonFile, inputSelector, outputSelector){
+		$.getJSON('../json/'+jsonFile, function(data){
+			let tmpl = $(inputSelector).html();
+			let html = Mustache.to_html(tmpl, data);
+			$(outputSelector).html(html);
+		});
+	}
 
 
 	function slidePortOverlay(elem, child){
-
 		$(elem).hover(
 			function(){
 				var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';

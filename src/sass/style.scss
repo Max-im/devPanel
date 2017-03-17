@@ -198,6 +198,7 @@
 		padding: 0 0 10px 0;
 		margin: 30px 0 40px 0;
 		position: relative;
+		opacity: 0;
 		&:after{
 			content: '';
 			display: block;
@@ -651,12 +652,7 @@
 
 /*FancyBox */
 /*==================================================*/
-#data1,
-#data2,
-#data3,
-#data4,
-#data5,
-#data6{
+.fancybox-skin{
 	background: $myGray;
 	border: 3px solid $myDark;
 	border-radius: 5px;
@@ -674,7 +670,7 @@
 		content: "\f00d";
 		font-family: 'FontAwesome';
 		position: absolute;
-		color: $myGray;
+		color: $myDark;
 	}
 	&:hover{
 		&:after{
