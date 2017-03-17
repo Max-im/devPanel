@@ -9,7 +9,7 @@
 	<title>devPanel</title>
 	<link rel="shortcut icon" href="favicon.png" />
 	<meta name="description" content="" /> <!-- !!! -->
-	<meta http equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="css/libs.min.css" />
 	<link rel="stylesheet" href="css/style.min.css" />
@@ -61,7 +61,7 @@
 						</a>
 					</li>
 					<li class="topLine__socItem">
-						<a class="topLine__socLink" target="_blank" href="https://mail.google.com/mail/u/0/h/14bhsfutagl3j/?&">
+						<a class="topLine__socLink" target="_blank" href="https://mail.google.com/mail/u/0/h/14bhsfutagl3j/?&amp;">
 							<i class="fa fa-google" aria-hidden="true"></i>
 						</a>
 					</li>
@@ -101,7 +101,7 @@
 	</div> <!-- topLine -->
 
 	<!-- slider -->
-	<section class="slider">
+	<div class="slider">
 		<img src="img/bg.jpg" alt="dard background" class="slider__img">		
 		<div class="container">
 			<div class="slider__contentWrapper">
@@ -115,7 +115,7 @@
 				</div>
 			</div>
 		</div> <!-- container -->
-	</section>
+	</div>
 </header>
 	
 
@@ -135,11 +135,11 @@
 <!-- MAIN -->
 <!-- ================================================ -->
 <main class="main" id="main">
-	<section class="main__item resume" id="resume">
+	<div class="main__item resume" id="resume">
 			
 
 
-			<section class="section aboutMe">
+			<div class="section aboutMe">
 				<div class="container">
 					
 
@@ -256,14 +256,14 @@
 
 
 				</div> <!-- container -->
-			</section>
+			</div>
 
 
 
 
 
 
-			<section class="section experience">
+			<div class="section experience">
 				<div class="container">
 					
 					<!-- experience -->
@@ -382,10 +382,10 @@
 
 
 				</div><!-- container -->
-			</section><!-- experience -->
+			</div><!-- experience -->
 
 
-			<section class="section portfolio">
+			<div class="section portfolio">
 				<div class="container">
 					
 
@@ -528,46 +528,46 @@
 									</div>
 								</figure>
 							</div>
-						</div> -->
+						</div>
 					</div> <!-- mixItUpWrap -->
 
 				</div><!-- container -->
-			</section>
+			</div>
 
-	</section> <!-- resume -->
+	</div> <!-- resume -->
 
-	<section class="main__item devPanel" id="devPanel">
+	<div class="main__item devPanel" id="devPanel">
 		<div class="container">
-			<section class="section prepare">
+			<div class="section prepare">
 				
-			</section>
-			<section class="section design">
+			</div>
+			<div class="section design">
 				
-			</section>
-			<section class="section htmlCss">
+			</div>
+			<div class="section htmlCss">
 				
-			</section>
-			<section class="section js">
+			</div>
+			<div class="section js">
 				
-			</section>
-			<section class="section wp">
+			</div>
+			<div class="section wp">
 				
-			</section>
-			<section class="section news">
+			</div>
+			<div class="section news">
 				
-			</section>
+			</div>
 		</div>
-	</section>
-	<section class="main__item private" id="private">
+	</div>
+	<div class="main__item private" id="private">
 		<div class="container">
-			<section class="section passwords">
+			<div class="section passwords">
 				
-			</section>
-			<section class="section toDoList">
+			</div>
+			<div class="section toDoList">
 				
-			</section>
+			</div>
 		</div>
-	</section>
+	</div>
 </main>
 	
 	
@@ -714,7 +714,7 @@
 			<figcaption>
 				{{figcaption}}
 			</figcaption>
-			<div class="portfolio__imgWrap">
+			<div class="portfolio__imgWrap" onClick=test()>
 				<div class="portfolio__overlay">
 					<div class="portfolio__linkBlock">
 						<a class="portfolio__link fa fa-link" href="{{faLink}}" target="_blank"></a>

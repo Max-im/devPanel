@@ -70,10 +70,29 @@ $myLight: #c0c6cc;
 /*==================================================*/
 /*animation*/
 /*==================================================*/
+@-webkit-keyframes spin{
+	0% { transform:rotate(0deg) scale(1.3)} 
+	42.85714% { transform:rotate(359deg) scale(1.3)} 
+	100% { transform:rotate(359deg) scale(1.3)}
+}
+
 @keyframes spin{
 	0% { transform:rotate(0deg) scale(1.3)} 
 	42.85714% { transform:rotate(359deg) scale(1.3)} 
 	100% { transform:rotate(359deg) scale(1.3)}
+}
+
+
+
+@-webkit-keyframes tada{
+ 0% { transform:translate(0,0) } 
+ 6.97675% { transform:translate(5px,0) } 
+ 13.95349% { transform:translate(0,0) } 
+ 20.93023% { transform:translate(5px,0) } 
+ 27.90698% { transform:translate(0,0) } 
+ 34.88372% { transform:translate(5px,0) } 
+ 41.86047% { transform:translate(0,0) } 
+ 100% { transform:translate(0,0) }
 }
 
 @keyframes tada{

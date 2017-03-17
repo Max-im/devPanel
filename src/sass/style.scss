@@ -198,7 +198,7 @@
 		padding: 0 0 10px 0;
 		margin: 30px 0 40px 0;
 		position: relative;
-		opacity: 0;
+		/*opacity: 0;*/
 		&:after{
 			content: '';
 			display: block;
@@ -310,16 +310,15 @@
 		border: 1px solid $myGray;
 		color: $myDark;
 		margin: 5px 10px;
-		transparent: all .3s;
+		transition: all .3s;
 		&:hover{
 			background: $accent;
-			transparent: all .3s;
+			transition: all .3s;
 			animation-name: tada;
 			animation-duration: 1.2s;
 		}
 	}
 }
-
 
 
 
@@ -356,9 +355,10 @@
 		box-sizing: border-box;
 		text-align: center;
 		&:hover{
-			transition: all .3s;
+			transition: all .5s;
 			background: darken($myGray, 15%);
-			border: 1px solid lighten($myGray, 30%);
+			border: 1px solid $accent;
+			box-shadow: 0 0 10px $accent;
 		}
 	}
 	&__img{
@@ -393,24 +393,13 @@
 		padding: 3px 5px;
 		border: 1px solid $myDark;
 		position: relative;
-		&:after{
-			content: '\f073';
-			position: absolute;
-			display: inline-block;
-			vertical-align: top;
-			color: $accent;
-			font-family: "FontAwesome";
-			top: 0;
-			right: -20px;
-			font-size: 16px;
-			font-weight: normal;
-		}
 	}
 	&__button{
 		border: 1px solid $accent;
 		border-radius: 3px;
 		padding: 5px 10px;
 		color: $accent;
+		background: none;
 		display: inline-block;
 		vertical-align: top;
 		margin: 20px auto 0px auto;

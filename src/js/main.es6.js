@@ -1,16 +1,44 @@
 (function($) {
-	tmplMaker('skills.json', '#skillsTmp', '.tmplSkillsInput');
-	tmplMaker('popup.json', '#popupTmp', '.popupInputTmpl');
+
+	/*1. HEADER*/
+	/*==================================================*/
 	
-
-
-	var mixer = mixitup('.mixItUpWrap');
-	sliderResizing();
+	// topLine
+	// --------------------------------------------------
 	$('.topLine__socItem_hide').on('click', menuResizing);
-	$(window).resize(sliderResizing);
-	$('.topLine__menuItem').on('click', mainMenuSwitch);
 
+
+
+	// slider
+	// --------------------------------------------------
+	sliderResizing();
+	$(window).resize(sliderResizing);
+
+
+
+
+
+
+	/*2. MAIN*/
+	/*==================================================*/
+	
+	// aboutMe
+	// --------------------------------------------------	
 	activeToggle('.aboutMe__selfInfoWrap .fa', 'aboutMe_active')
+
+
+
+
+	// experience
+	// --------------------------------------------------	
+	tmplMaker('popup.json', '#popupTmp', '.popupInputTmpl');
+
+
+
+
+	// portfolio
+	// --------------------------------------------------
+	var mixer = mixitup('.mixItUpWrap');
 	slidePortOverlay('.portfolio__imgWrap', '.portfolio__overlay');
 	$('.experience__button').fancybox({
 		'overlayShow': true,
@@ -18,29 +46,43 @@
 		'overlayColor': '#333',
 		'showCloseButton': 'show'
 	});
-	
 
 
 
-$(window).scroll( function(){
-	let docHeight = $(document).height();
-	let winHeight = $(window).height();
-	let winTop = $(window).scrollTop();
-
-	$('.section__header').each(
-		function(el){
-			let elTop = $(this).offset().top;
-			if((winTop+winHeight) > elTop && winTop < elTop){
-				$(this).addClass('animated fadeInDown');
-			}else{
-				$(this).removeClass('animated fadeInDown');
-			}
-		}
-	);
+	/*3. FOOTER*/
+	/*==================================================*/
+	tmplMaker('skills.json', '#skillsTmp', '.tmplSkillsInput');
 
 
-}
-);
+
+
+	/*4. COMMON*/
+	/*==================================================*/
+	$('.topLine__menuItem').on('click', mainMenuSwitch);
+	animateScreen('.section__header', 'zoomIn')	
+
+
+
+	/*5. FUNCTIONS*/
+	/*==================================================*/
+
+	function animateScreen(elementSelector ,effect){
+		$(window).scroll( function(){
+			let winHeight = $(window).height();
+			let winTop = $(window).scrollTop();
+			$(elementSelector).each(
+				function(el){
+					let elTop = $(this).offset().top;
+					if((winTop+winHeight) > elTop && winTop < elTop){
+						$(this).addClass('animated '+effect).css('opacity', 1);
+
+					}else{
+						$(this).removeClass('animated '+effect).css('opacity', 0);
+					}
+				}
+			);
+		});
+	}
 
 
 	function tmplMaker(jsonFile, inputSelector, outputSelector){
