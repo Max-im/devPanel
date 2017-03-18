@@ -24,8 +24,8 @@
 	
 	// aboutMe
 	// --------------------------------------------------	
-	activeToggle('.aboutMe__selfInfoWrap .fa', 'aboutMe_active')
-
+	activeToggle('.aboutMe__selfInfoWrap .fa', 'aboutMe_active');
+	$('.aboutMe__skillsControlItem').on('click', toggleMixItUpClass);
 
 
 
@@ -38,7 +38,7 @@
 
 	// portfolio
 	// --------------------------------------------------
-	var mixer = mixitup('.mixItUpWrap');
+	let mixer2 = mixitup('.mixItUpWrap');
 	slidePortOverlay('.portfolio__imgWrap', '.portfolio__overlay');
 	$('.experience__button').fancybox({
 		'overlayShow': true,
@@ -65,6 +65,21 @@
 
 	/*5. FUNCTIONS*/
 	/*==================================================*/
+
+	function toggleMixItUpClass(){
+		var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+		let data = $(this).find('.aboutMe__skillsButton').attr('data-filter');
+		let visibleEl = $('.aboutMe__skillsItems .'+data);
+		$('.aboutMe__skillsItem').addClass('animated flipOutX').one(animationEnd, function(){
+			$('.aboutMe__skillsItem').css({
+				display: 'none'
+			});
+			$(visibleEl).removeClass('animated flipOutX').addClass('animated flipInX').css('display','inline-block');
+		});
+	}
+
+
+
 
 	function animateScreen(elementSelector ,effect){
 		$(window).scroll( function(){

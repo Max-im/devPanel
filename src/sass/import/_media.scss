@@ -60,59 +60,6 @@
 /*==================================================*/
 .main{
 
-.aboutMe{
-	&__selfInfoWrap{
-		display: inline-block;
-		width: 100%;
-		text-align: center;
-	}
-	&__photoWrap{
-		display: inline-block;
-		margin: 0 0 0 10px;
-	}
-	&__photo{
-		width: 150px;
-		height: 150px;
-		box-shadow: 0 2px 3px black;	
-	}
-	&__txtWrap{
-		margin: 0 0 0 10px;
-		line-height: 40px;
-		text-align: left;
-	}
-	&__name{
-		font-size: 22px;
-	}
-	&__socLinks{
-		display: inline-block;
-		li{
-			line-height: 40px;
-			margin: 0 20px 0 0;
-		}
-	}
-}
-
-
-.skills{
-	width: 100%;
-	display: block;
-	margin: 20px auto;
-	text-align: center;
-	&__item{
-		display: inline-block;
-		vertical-align: top;
-		font-size: 14px;
-		margin: 8px 0;
-	}
-	&__link{
-		display: block;
-		padding: 3px 5px;
-		border-radius: 10px;
-		margin: 12px 7px;
-	}
-}
-
-
 
 
 
@@ -232,6 +179,119 @@
 /*==================================================*/
 
 .main{
+
+
+/*aboutMe*/
+/*==================================================*/
+.aboutMe{
+	&__infoWrap{
+		flex-basis: 100%;
+		margin: 0 10px	;
+	}
+	&__imgWrap{
+		padding: 7px;
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+		width: 200px;
+		&Doble{
+			width: 180px;
+		}
+	}
+	&__textWrap{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 0 0 30px;
+	}
+	&__name{
+		font-size: 20px;
+		padding: 0 0 10px 0;
+		margin: 10px 0;
+	}
+	&__socWrap{
+		margin: 10px 0;
+		padding: 0 0 10px 0;
+	}
+	&__socLink{
+		display: block;
+		margin: 5px;
+		text-align: center;
+		line-height: 30px !important;
+		width: 30px;
+		height: 30px;
+	}
+	&__infoItem{
+		padding: 5px 0;
+	}
+	&__skills{
+		flex-basis: 100%;
+		text-align: center;
+		margin: 0px;
+	}
+	&__skillsHeader{
+		font-size: 24px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		text-align: center;
+		margin: 20px 0;
+	}
+	&__skillsControl{
+		font-size: 0;
+	}
+	&__skillsControlItem{
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		width: (100%/4);
+		position: relative;
+	}
+	&__skillsButton{
+		box-sizing: border-box;
+		font-size: 14px;
+		text-transform: uppercase;
+		padding: 10px 0;
+		background: none;
+		border: none;
+		display: inline-block;
+		width: 100%;
+		cursor: pointer;
+	}
+
+	&__skillsItems{
+		margin: 20px 0 0 0;
+	}
+	&__skillsItem{
+		display: inline-block;
+		padding: 10px;
+		margin: 5px;
+		width: 50px;
+		background: #fff;
+	}
+	&__skillsImg{
+		width: 100%;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*experience*/
 /*==================================================*/
@@ -416,60 +476,96 @@
 
 
 
+/*aboutMe*/
+/*==================================================*/
 .aboutMe{
-	&__selfInfoWrap{
-		display: inline-block;
-		width: 100%;
-		text-align: center;
+	&__infoWrap{
+		flex-basis: 100%;
+		margin: 0 30px	;
+	}
+	&__imgWrap{
+		padding: 7px;
 		margin: 0;
-	}
-	&__photoWrap{
 		display: inline-block;
-		margin: 0 0 0 10px;
-		width: 100%;
-	}
-	&__photo{
-		width: 150px;
-		height: 150px;
-		box-shadow: 0 2px 3px black;	
-	}
-	&__txtWrap{
-		margin: 15px 0 0 10px;
-		line-height: 40px;
-		text-align: left;
-	}
-	&__name{
-		font-size: 22px;
-	}
-	&__socLinks{
-		display: inline-block;
-		li{
-			line-height: 40px;
-			margin: 0 20px 0 0;
+		width: 200px;
+		&Doble{
+			width: 180px;
 		}
 	}
-}
-
-
-.skills{
-	width: 100%;
-	display: block;
-	margin: 20px auto;
-	text-align: center;
-	&__item{
+	&__textWrap{
+		display: inline-block;
+		margin: 10px 0;
+		width: 100%;
+	}
+	&__name{
+		font-size: 20px;
+		padding: 0 0 10px 0;
+		margin: 10px 0;
+	}
+	&__socWrap{
+		margin: 10px 0;
+		padding: 0 0 10px 0;
+	}
+	&__socLink{
+		display: block;
+		margin: 5px;
+		text-align: center;
+		line-height: 30px !important;
+		width: 30px;
+		height: 30px;
+	}
+	&__infoItem{
+		padding: 5px 0;
+	}
+	&__skills{
+		flex-basis: 100%;
+		text-align: center;
+		margin: 20px 0 0 0px;
+	}
+	&__skillsHeader{
+		font-size: 24px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		text-align: center;
+		margin: 0 0 20px 0;
+	}
+	&__skillsControl{
+		font-size: 0;
+	}
+	&__skillsControlItem{
 		display: inline-block;
 		vertical-align: top;
-		font-size: 14px;
-		margin: 8px 0;
-		width: 33%;
+		text-align: center;
+		width: (100%/4);
+		position: relative;
 	}
-	&__link{
-		display: block;
-		padding: 3px 5px;
-		border-radius: 10px;
-		margin: 12px 7px;
+	&__skillsButton{
+		font-size: 12px;
+		text-transform: uppercase;
+		padding: 15px 0;
+		background: none;
+		border: none;
+		display: inline-block;
+		width: 100%;
+		cursor: pointer;
 	}
+
+	&__skillsItems{
+		margin: 20px 0 0 0;
+	}
+	&__skillsItem{
+		display: inline-block;
+		padding: 10px;
+		margin: 5px;
+		width: 50px;
+		background: #fff;
+	}
+	&__skillsImg{
+		width: 100%;
+	}
+	
 }
+
 
 
 
