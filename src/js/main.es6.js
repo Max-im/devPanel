@@ -11,8 +11,7 @@
 
 	// slider
 	// --------------------------------------------------
-	sliderResizing();
-	$(window).resize(sliderResizing);
+	
 
 
 
@@ -26,6 +25,10 @@
 	// --------------------------------------------------	
 	activeToggle('.aboutMe__selfInfoWrap .fa', 'aboutMe_active');
 	$('.aboutMe__skillsControlItem').on('click', toggleMixItUpClass);
+	$('.aboutMe__skillsControlItem').on('click', skillsMenuSwitch);
+	let pos = 0;
+	
+	
 
 
 
@@ -38,7 +41,7 @@
 
 	// portfolio
 	// --------------------------------------------------
-	let mixer2 = mixitup('.mixItUpWrap');
+	let mixer = mixitup('.mixItUpWrap');
 	slidePortOverlay('.portfolio__imgWrap', '.portfolio__overlay');
 	$('.experience__button').fancybox({
 		'overlayShow': true,
@@ -58,17 +61,49 @@
 
 	/*4. COMMON*/
 	/*==================================================*/
+	pageResizing();
+	$(window).resize(pageResizing);
 	$('.topLine__menuItem').on('click', mainMenuSwitch);
 	animateScreen('.section__header', 'zoomIn')	
+
+
 
 
 
 	/*5. FUNCTIONS*/
 	/*==================================================*/
 
+	function pageResizing(){
+		// sliderResizing
+		let wh = $(window).height();
+		let topMenuHeight = $('.topLine').height();
+		let sliderHeight = $('.slider').height(wh - topMenuHeight);
+
+
+
+		// skillsMenuResizing
+		let btnWidth = $('.aboutMe__skillsControlItem').width();
+		$('.aboutMe__skillsItem_line').width(btnWidth).css({
+			left: pos * btnWidth || 0
+		});
+	}
+
+
+	function skillsMenuSwitch(){
+		let leftPosition = $(this).offset().left - $('.aboutMe__skillsControlItem').offset().left;
+		$('.aboutMe__skillsItem_line').animate({
+			left: leftPosition
+		}, 800);
+		let btnWidth = $('.aboutMe__skillsControlItem').width();
+
+		pos = leftPosition / btnWidth;
+	}
+
+
+
 	function toggleMixItUpClass(){
 		var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-		let data = $(this).find('.aboutMe__skillsButton').attr('data-filter');
+		let data = $(this).find('.aboutMe__skillsButton').attr('data-item');
 		let visibleEl = $('.aboutMe__skillsItems .'+data);
 		$('.aboutMe__skillsItem').addClass('animated flipOutX').one(animationEnd, function(){
 			$('.aboutMe__skillsItem').css({
@@ -173,11 +208,6 @@
 		}).fadeIn(1500);
 	}
 
-	function sliderResizing(){
-		let wh = $(window).height();
-		let topMenuHeight = $('.topLine').height();
-		let sliderHeight = $('.slider').height(wh - topMenuHeight);
-	}
 
 	function menuResizing(e){
 		e.preventDefault();

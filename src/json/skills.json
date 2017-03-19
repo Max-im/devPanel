@@ -26,9 +26,9 @@
 			"img":"img/skills/json.png"
 		},
 		{
-			"link":"https://mochajs.org/",
-			"alt":"mocha",
-			"img":"img/skills/mocha.png"
+			"link":"https://jasmine.github.io/",
+			"alt":"jasmine",
+			"img":"img/skills/jasmine.png"
 		},
 		{
 			"link":"https://www.npmjs.com/",
