@@ -186,7 +186,7 @@
 .aboutMe{
 	&__infoWrap{
 		flex-basis: 100%;
-		margin: 0 10px	;
+		margin: 0 10px;
 	}
 	&__imgWrap{
 		padding: 7px;
@@ -256,7 +256,6 @@
 		width: 100%;
 		cursor: pointer;
 	}
-
 	&__skillsItems{
 		margin: 20px 0 0 0;
 	}
@@ -269,6 +268,9 @@
 	}
 	&__skillsImg{
 		width: 100%;
+	}
+	.flex{
+		flex-wrap: wrap;
 	}
 	
 }
@@ -310,8 +312,6 @@
 		text-transform: uppercase;
 		font-weight: bold;
 	}
-	&__workPlace{
-	}
 	&__timeAmount{
 		border-radius: 10px;
 		padding: 3px 5px;
@@ -345,35 +345,34 @@
 }
 
 
-
-
-
-
 }/*main*/
+
+
+
+
 
 /*3. FOOTER*/
 /*==================================================*/
-.wrapper{
-.flex{
-	flex-wrap: wrap;
-}
 .footer{
+	.flex{
+		flex-wrap: wrap !important;
+	}
 	padding: 30px 0 40px 0;
-	font-size: 0;
 	&__item{
 		font-size: 14px;
 		&_links{
-			width: 100%;
+			width: 100% !important;
 			order: 3;
 			margin: 20px 0 0 0;
+
 		}
 		&_soc{
-			width: 70%;
+			width: 70% !important;
 			order: 1;
-			text-align: left;
+			text-align: left !important;
 		}
 		&_nav{
-			width: 30%;
+			width: 30% !important;
 			order: 2;
 
 		}
@@ -383,7 +382,7 @@
 		&_soc{
 			display: inline-block;
 			vertical-align: top;
-			width: 25px;
+			width: 25px !important;
 			margin: 0 3px;
 			text-align: center;
 		}
@@ -405,7 +404,7 @@
 			height: 25px;
 			.fa{
 				float: none;
-				line-height: 25px;
+				line-height: 25px !important;
 			}
 		}
 		&_links{
@@ -420,7 +419,6 @@
 
 
 
-}
 
 
 
@@ -481,7 +479,7 @@
 .aboutMe{
 	&__infoWrap{
 		flex-basis: 100%;
-		margin: 0 30px	;
+		margin: 0 30px;
 	}
 	&__imgWrap{
 		padding: 7px;
@@ -562,6 +560,9 @@
 	}
 	&__skillsImg{
 		width: 100%;
+	}
+	.flex{
+		flex-wrap: wrap;
 	}
 	
 }

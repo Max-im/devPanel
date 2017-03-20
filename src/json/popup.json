@@ -2,27 +2,45 @@
 	"popup":[
 		{
 			"id":"data1",
-			"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex aliquid optio, iusto quas temporibus. Eaque accusamus sit voluptate numquam aspernatur, reprehenderit esse voluptas dolorum ipsam error vel perferendis repellendus natus!"
+			"img":"../img/experience/_chnpp.jpg",
+			"h4":" Chernobyl nuclear power plant ",
+			"position":"The engineer on the organization and standardization of work",
+			"duties":"Participation in performance appraisal of workplaces; Performance of works on tariffing; Carrying out works aimed at maintaining the level of labor standardization at the enterprise; Check of official and working instructions."
 		},
 		{
 			"id":"data2",
-			"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore nesciunt maxime quidem consectetur ea natus, voluptatum porro iusto molestiae, quam nulla veniam repellat quas eum! In velit vitae, maiores laudantium."
+			"img":"../img/experience/_gaz.jpg",
+			"h4":" Regional gas company ",
+			"position":"",
+			"duties":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore nesciunt maxime quidem consectetur ea natus, voluptatum porro iusto molestiae, quam nulla veniam repellat quas eum! In velit vitae, maiores laudantium."
 		},
 		{
 			"id":"data3",
-			"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius maiores, quidem atque voluptates totam odit possimus doloremque qui earum fugiat, neque omnis repellendus minima facilis? Nesciunt id minima aliquid ratione!"
+			"img":"../img/experience/_pb.jpg",
+			"h4":" PrivateBank ",
+			"position":"",
+			"duties":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius maiores, quidem atque voluptates totam odit possimus doloremque qui earum fugiat, neque omnis repellendus minima facilis? Nesciunt id minima aliquid ratione!"
 		},
 		{
 			"id":"data4",
-			"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla rem laboriosam nesciunt illum neque voluptatum ratione minima tempora id, nam quos suscipit blanditiis ab provident dolores, velit, corrupti ad non."
+			"img":"../img/experience/_otherWork.jpg",
+			"h4":" Other experience ",
+			"position":"",
+			"duties":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla rem laboriosam nesciunt illum neque voluptatum ratione minima tempora id, nam quos suscipit blanditiis ab provident dolores, velit, corrupti ad non."
 		},
 		{
 			"id":"data5",
-			"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, accusamus et totam nihil distinctio voluptatem delectus possimus numquam tenetur natus! Doloribus quasi sed obcaecati sequi atque? Molestias explicabo blanditiis reiciendis."
+			"img":"../img/experience/_donNu.jpg",
+			"h4":"CS50",
+			"position":"",
+			"duties":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, accusamus et totam nihil distinctio voluptatem delectus possimus numquam tenetur natus! Doloribus quasi sed obcaecati sequi atque? Molestias explicabo blanditiis reiciendis."
 		},
 		{
 			"id":"data6",
-			"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis reiciendis recusandae, alias velit voluptate quis unde, vero rem repellat dicta, quae aliquid quod excepturi est nulla animi saepe asperiores! Fugit."
+			"img":"../img/experience/_cs50.jpg",
+			"h4":"DonNU",
+			"position":"",
+			"duties":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis reiciendis recusandae, alias velit voluptate quis unde, vero rem repellat dicta, quae aliquid quod excepturi est nulla animi saepe asperiores! Fugit."
 		}
 	]
 }

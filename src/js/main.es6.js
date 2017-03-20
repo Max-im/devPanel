@@ -5,6 +5,7 @@
 	
 	// topLine
 	// --------------------------------------------------
+	$('.topLine__menuItem').on('click', mainMenuSwitch);
 	$('.topLine__socItem_hide').on('click', menuResizing);
 
 
@@ -23,12 +24,12 @@
 	
 	// aboutMe
 	// --------------------------------------------------	
+	tmplMaker('skills.json', '#mainSkillsTmp', '.aboutMe__skillsItems');	
 	activeToggle('.aboutMe__selfInfoWrap .fa', 'aboutMe_active');
 	$('.aboutMe__skillsControlItem').on('click', toggleMixItUpClass);
 	$('.aboutMe__skillsControlItem').on('click', skillsMenuSwitch);
 	let pos = 0;
-	
-	
+		
 
 
 
@@ -55,6 +56,9 @@
 	/*3. FOOTER*/
 	/*==================================================*/
 	tmplMaker('skills.json', '#skillsTmp', '.tmplSkillsInput');
+	$('.footer__link_nav').on('click', activeBottomMenu);
+
+
 
 
 
@@ -63,7 +67,6 @@
 	/*==================================================*/
 	pageResizing();
 	$(window).resize(pageResizing);
-	$('.topLine__menuItem').on('click', mainMenuSwitch);
 	animateScreen('.section__header', 'zoomIn')	
 
 
@@ -90,10 +93,11 @@
 
 
 	function skillsMenuSwitch(){
-		let leftPosition = $(this).offset().left - $('.aboutMe__skillsControlItem').offset().left;
+		let leftPosition = $(this).offset().left - $(
+			'.aboutMe__skillsControlItem').offset().left;
 		$('.aboutMe__skillsItem_line').animate({
 			left: leftPosition
-		}, 800);
+		},800);
 		let btnWidth = $('.aboutMe__skillsControlItem').width();
 
 		pos = leftPosition / btnWidth;
@@ -195,6 +199,7 @@
 
 	function mainMenuSwitch(e){
 		e.preventDefault();
+		$(window).scrollTop();
 		let selectorId = ($(this).attr('data-menu'));
 		$('.main__item').hide();
 		$(selectorId).show();
@@ -225,6 +230,13 @@
 		}
 	}
 
+	function activeBottomMenu(e){
+		e.preventDefault();
+		$(window).scrollTop(0);
+		let data = $(this).attr('data-menu');
+		let target = $('.topLine__menuItem[data-menu="'+data+'"]');
+		$(target).click();
+	}
 
 
 

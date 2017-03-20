@@ -708,3 +708,31 @@
 		}	
 	}
 }
+
+
+.popupImg{
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	border: 1px solid $accent;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.popupHeader{
+	display: inline-block;
+	vertical-align: top;
+	/*width: 600px;*/
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.popupPosition{
+	text-decoration: underline;
+	font-size: 18px;
+	margin: 10px 0 0 0;
+	line-height: 22px;
+}
+.popupDuties{
+	line-height: 22px;
+	margin: 10px 0 0 50px;
+}
