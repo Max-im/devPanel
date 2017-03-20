@@ -19,6 +19,12 @@
 			"img":"img/skills/jquery.png"
 		},
 		{
+			"link":"https://lodash.com/",
+			"alt":"lodash",
+			"className":"all js",
+			"img":"img/skills/lodash.png"
+		},
+		{
 			"link":"https://ru.wikipedia.org/wiki/JavaScript",
 			"alt":"js",
 			"className":"all js",

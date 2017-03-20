@@ -217,6 +217,35 @@
 /*aboutMe*/
 /*==================================================*/
 .aboutMe{
+	position: relative;
+	&__mailMe{
+		position: fixed;
+		background: $accent;
+		color: #fff;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		font-size: 30px !important;
+		bottom: 50px;
+		right: 50px;
+		line-height: 40px !important;
+		text-align: center;
+		box-sizing: border-box;
+		z-index: 150;
+		display: block;
+		border: 3px solid rgba(0,0,0,0);
+		opacity: .6;
+		transition: all .3s;
+		animation: shake 5s ease-in infinite;
+		&:hover{
+			transition: all .3s;
+			box-sizing: border-box;
+			opacity: 1;
+			border: 3px solid #333;
+			box-shadow: 0 0 10px white;
+			animation: none;
+		}
+	}
 	&__infoWrap{
 		flex-basis: 20%;
 		margin: 0 0 0 10px	;
