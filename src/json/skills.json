@@ -37,6 +37,12 @@
 			"img":"img/skills/json.png"
 		},
 		{
+			"link":"http://phantomjs.org/",
+			"alt":"phantom",
+			"className":"all js",
+			"img":"img/skills/phantom.png"
+		},
+		{
 			"link":"https://jasmine.github.io/",
 			"alt":"jasmine",
 			"className":"all js",
@@ -53,6 +59,12 @@
 			"alt":"photoshop",
 			"className":"all rand",
 			"img":"img/skills/ps.png"
+		},
+		{
+			"link":"http://www.php.net/",
+			"alt":"php",
+			"className":"all rand",
+			"img":"img/skills/php.png"
 		},
 		{
 			"link":"https://facebook.github.io/react/",

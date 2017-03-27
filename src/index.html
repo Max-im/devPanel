@@ -84,6 +84,11 @@
 						</a>
 					</li>
 					<li class="topLine__socItem">
+						<a class="topLine__socLink" target="_blank" href="https://www.dropbox.com/home?d=1">
+						<i class="fa fa-dropbox" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li class="topLine__socItem">
 						<a class="topLine__socLink" target="_blank" href="http://codepen.io/#">
 							<i class="fa fa-codepen" aria-hidden="true"></i>
 						</a>
@@ -102,6 +107,8 @@
 			</div>
 		</div> <!-- container -->
 	</div> <!-- topLine -->
+
+
 
 	<!-- slider -->
 	<div class="slider">
@@ -385,6 +392,16 @@
 
 				</div><!-- container -->
 			</div><!-- experience -->
+
+
+
+
+
+
+
+
+
+
 
 
 			<div class="section portfolio">
@@ -765,6 +782,23 @@
 </div>
 
 {{/mySkills}}
+</script>
+
+
+
+
+
+<!-- topSocMenu -->
+<!-- ================================================== -->
+<script id="topSocTmp" type="text/template">
+{{#topSocMenu}}
+<li class="{{liClass}}">
+	<a class="topLine__socLink" target="_blank" href="{{link}}">
+		<i class="{{class}}" aria-hidden="true"></i>
+	</a>
+</li>
+
+{{/topSocMenu}}
 </script>
 
 

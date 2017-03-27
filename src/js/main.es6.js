@@ -5,14 +5,17 @@
 	
 	// topLine
 	// --------------------------------------------------
+	// tmplMaker('topSocMenu.json', '#topSocTmp', '.topLine__socMenu');	
 	$('.topLine__menuItem').on('click', mainMenuSwitch);
 	$('.topLine__socItem_hide').on('click', menuResizing);
-
+	
 
 
 	// slider
 	// --------------------------------------------------
-	
+	$('.slider__circleWrap').on('click', toMainScroll);
+
+		
 
 
 
@@ -80,7 +83,12 @@
 		// sliderResizing
 		let wh = $(window).height();
 		let topMenuHeight = $('.topLine').height();
-		let sliderHeight = $('.slider').height(wh - topMenuHeight);
+		let sliderHeight;
+		if(wh < 768){
+			sliderHeight = $('.slider').height(wh - topMenuHeight + 50);
+		}else{
+			sliderHeight = $('.slider').height(wh - topMenuHeight);
+		}
 
 
 
@@ -89,6 +97,7 @@
 		$('.aboutMe__skillsItem_line').width(btnWidth).css({
 			left: pos * btnWidth || 0
 		});
+
 	}
 
 
@@ -215,9 +224,9 @@
 
 
 	function menuResizing(e){
+		e.stopPropagation();
 		e.preventDefault();
 		let btn = $(this).find('.fa');
-		console.log(btn);
 		if($(btn).hasClass('fa-chevron-down')){
 			$(btn).removeClass('fa-chevron-down');
 			$(btn).addClass('fa-chevron-up');
@@ -238,6 +247,19 @@
 		$(target).click();
 	}
 
+	function toMainScroll(e){
+		e.preventDefault();
+		let mainTop = $('.main').offset().top - 50;
+		console.log(mainTop);
+		$('html, body').animate({
+			scrollTop: mainTop
+		},1000);
+	}
+
+
+					
+					
+			
 
 
 })(jQuery);
