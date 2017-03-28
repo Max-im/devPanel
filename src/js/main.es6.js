@@ -5,7 +5,6 @@
 	
 	// topLine
 	// --------------------------------------------------
-	// tmplMaker('topSocMenu.json', '#topSocTmp', '.topLine__socMenu');	
 	$('.topLine__menuItem').on('click', mainMenuSwitch);
 	$('.topLine__socItem_hide').on('click', menuResizing);
 	
@@ -39,6 +38,13 @@
 	// experience
 	// --------------------------------------------------	
 	tmplMaker('popup.json', '#popupTmp', '.popupInputTmpl');
+	$('.experience__button').fancybox({
+		'overlayShow': true,
+		'overlayOpacity': .6,
+		'overlayColor': '#333',
+		'showCloseButton': 'show'
+	});
+	$('.experience__button').on('click', popupListInit);
 
 
 
@@ -47,12 +53,6 @@
 	// --------------------------------------------------
 	let mixer = mixitup('.mixItUpWrap');
 	slidePortOverlay('.portfolio__imgWrap', '.portfolio__overlay');
-	$('.experience__button').fancybox({
-		'overlayShow': true,
-		'overlayOpacity': .6,
-		'overlayColor': '#333',
-		'showCloseButton': 'show'
-	});
 
 
 
@@ -73,11 +73,32 @@
 	animateScreen('.section__header', 'zoomIn')	
 
 
+			
 
 
 
 	/*5. FUNCTIONS*/
 	/*==================================================*/
+	function popupListInit(e){
+		let elem = $(this).attr('href');
+		let textDuties = $(elem).find('.popupDuties').text();
+		let target = $(elem).find('.dutiesWrap');
+		let arrDuties = textDuties.split(';');
+		let len = arrDuties.length -1;
+		let list = ' ';
+		list += '<ul class="popupDutiesList">';
+		for(let i = 0; i < len; i++){
+			list += '<li class="popupDutiesListItem">';
+			list += '<i class="fa fa-tag" aria-hidden="true"></i>';
+			list += arrDuties[i];
+			list += '</li>';
+		}
+		list += '</ul>';
+
+		$(target).empty();
+		$(target).append(list);
+	}
+			
 
 	function pageResizing(){
 		// sliderResizing

@@ -222,6 +222,14 @@
 /*aboutMe*/
 /*==================================================*/
 .aboutMe{
+	&__mailMe{
+		width: 30px;
+		height: 30px;
+		font-size: 16px !important;
+		bottom: 20px;
+		right: 20px;
+		line-height: 20px !important;
+	}
 	&__infoWrap{
 		flex-basis: 100%;
 		margin: 0 10px;
