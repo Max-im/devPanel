@@ -1,22 +1,20 @@
-module.exports = function(React, ReactDOM) {
+module.exports = function(React, ReactDOM, Component) {
 	
 
-	const Component = React.createClass({
-		render: function () {
+	class Comp extends Component{
+		render(){
 			return (
 				<div>
 					<h1 className="header">Hello world</h1>
 					<p>lorem</p>
 				</div>
-
-			);
+			)
 		}
-	});
-
+	}
 
 
 	ReactDOM.render(
-		<Component />, 
+		<Comp />, 
 		document.getElementById('app')
 	);
 

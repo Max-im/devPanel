@@ -1,4 +1,4 @@
-module.exports = function($, fancybox, Mustache, mixitup) {
+module.exports = function($, Mustache, mixitup) {
 
 /*1. HEADER*/
 	/*==================================================*/
@@ -37,14 +37,14 @@ module.exports = function($, fancybox, Mustache, mixitup) {
 
 	// // experience
 	// // --------------------------------------------------	
-	// tmplMaker('popup.json', '#popupTmp', '.popupInputTmpl');
-	// $('.experience__button').fancybox({
-	// 	'overlayShow': true,
-	// 	'overlayOpacity': .6,
-	// 	'overlayColor': '#333',
-	// 	'showCloseButton': 'show'
-	// });
-	// $('.experience__button').on('click', popupListInit);
+	tmplMaker('popup.json', '#popupTmp', '.popupInputTmpl');
+	$('.experience__button').fancybox({
+		'overlayShow': true,
+		'overlayOpacity': .6,
+		'overlayColor': '#333',
+		'showCloseButton': 'show'
+	});
+	$('.experience__button').on('click', popupListInit);
 
 
 
@@ -80,6 +80,7 @@ module.exports = function($, fancybox, Mustache, mixitup) {
 	/*5. FUNCTIONS*/
 	/*==================================================*/
 	function popupListInit(e){
+		e.preventDefault();
 		let elem = $(this).attr('href');
 		let textDuties = $(elem).find('.popupDuties').text();
 		let target = $(elem).find('.dutiesWrap');
@@ -271,7 +272,6 @@ module.exports = function($, fancybox, Mustache, mixitup) {
 	function toMainScroll(e){
 		e.preventDefault();
 		let mainTop = $('.main').offset().top - 50;
-		console.log(mainTop);
 		$('html, body').animate({
 			scrollTop: mainTop
 		},1000);

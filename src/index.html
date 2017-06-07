@@ -3,7 +3,8 @@
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns# 
+          profile: http://ogp.me/ns/profile#">
 
 <head>
 	<meta charset="UTF-8" />
@@ -12,12 +13,26 @@
 	<meta name="description" content="" /> <!-- !!! -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta property="og:title" content="Maxim Pozhidayev" />
+	<meta property="og:type" content="profile" />
+	<meta property="og:url" content="https://max-im.github.io" />
+	<meta property="og:image" content="https://max-im.github.io/img/microdata.jpg" />
+	<meta property="profile:first_name" content="Maxim" />
+	<meta property="profile:last_name" content="Pozhidayev" />
+	<meta property="profile:gender" content="male" />
+
+
 	<link rel="stylesheet" href="css/style.min.css" />
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="fonts/fontAwesome/css/font-awesome.css" />
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
+
 
 
 <body>
@@ -355,7 +370,7 @@
 										2003 - 2008
 									</span>
 								</div>
-								<a href="#data6" class="experience__button">
+								<a href="#data5" class="experience__button">
 									Read more
 								</a>
 							</div>
@@ -530,32 +545,90 @@
 
 	</div> <!-- resume -->
 
-	<div class="main__item devPanel" id="devPanel">
-		<div class="container">
-			<div class="section prepare">
+
+
+
+
+
+
+
+	<div class="main__item devPanel section" id="devPanel">
+			
+
+		<div class="section">
+			<div class="container">
 				
-			</div>
-			<div class="section design">
+				<div class="section__headerWrap">
+					<h3 class="section__header">
+						Links
+					</h3>
+				</div>
 				
-			</div>
-			<div class="section htmlCss">
 				
-			</div>
-			<div class="section js">
+			</div><!-- container -->
+		</div><!-- section -->
+		
+
+
+
+
+		<div class="section ">
+			<div class="container">
 				
-			</div>
-			<div class="section wp">
-				
-			</div>
-			<div class="section news">
-				
-			</div>
-		</div>
-	</div>
+				<div class="section__headerWrap">
+					<h3 class="section__header">
+						Courses
+					</h3>
+				</div>
+
+				<div id="coursesWrap">
+					
+
+				</div>
+
+			</div><!-- container -->
+
+		</div><!-- section -->
+
+
+
+
+	</div><!-- devPanel -->
+
+
+
+
+
+
+
+
+
+
+
+
 	<div class="main__item private" id="private">
 		<div class="container">
 			<div class="section passwords">
 				
+
+
+				<div class="panelLink">
+				
+				
+					<div class="panelLink__item panelLink__item_prepare">
+						<h3 class="panelLink__header">prepare</h3>
+					</div>
+					<div class="panelLink__item panelLink__item_css">
+						<h3 class="panelLink__header">html css</h3>
+					</div>
+					<div class="panelLink__item panelLink__item_js">
+						<h3 class="panelLink__header">js</h3>
+					</div>
+					<div class="panel__content">
+						
+					</div>
+				</div><!-- panelLink -->
+
 			</div>
 			<div class="section toDoList">
 				
@@ -769,7 +842,7 @@
 {{#mySkills}}
 <div class="aboutMe__skillsItem {{className}}">
 	<a target='_blank' href="{{link}}">
-		<img class="aboutMe__skillsImg" src="{{img}}" alt="{{alt}}" />
+		 <img class="aboutMe__skillsImg" src="{{img}}" />
 	</a>
 </div>
 

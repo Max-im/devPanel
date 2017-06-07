@@ -1,11 +1,20 @@
 %svg-common {
-	background: url("../img/svg/sprite-4362f994.svg") no-repeat;
+	background: url("../img/svg/sprite-291c5890.svg") no-repeat;
+	display: block;
+	transform: scale(5);
 }
 
-.svg__i {
+.svg__lnr-chevron-left {
 	@extend %svg-common;
 	background-position: 0 0;
-	width: 163.299px;
-	height: 157.826px;
+	width: 0px;
+	height: 16px;
+}
+
+.svg__lnr-chevron-right {
+	@extend %svg-common;
+	background-position: 0 100%;
+	width: 0px;
+	height: 14px;
 }
 
