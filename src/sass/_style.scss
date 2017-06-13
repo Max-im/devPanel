@@ -177,7 +177,7 @@
 .main__item{
 	display: none;
 }
-.devPanel{
+.resume{
 	display: block;
 }
 .section{
@@ -606,6 +606,204 @@
 
 
 
+/*==================================================*/
+
+// devPanel
+
+/*==================================================*/
+
+
+
+
+
+// links
+/*==================================================*/
+.links{
+	&__section{
+		margin: 20px 0;
+	}
+	&__block{
+		margin: 10px 0 0 0;
+		padding:20px 15px;
+		&_social{
+		}
+		&_prepare{
+		}
+		&_html{
+		}
+		&_js{
+		}
+		&_eng{
+		}
+		&_news{
+		}
+		&:hover{
+			.links__header{
+				color: #fff;
+				background: $myDark;
+				text-indent: 100px;
+				transition: all .6s;
+			}
+		}
+	}
+	&__header{
+		transition: all .6s;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 100;
+		letter-spacing: 2px;
+		color: $myGray;
+		text-indent: 50px;
+		margin:  0 0 30px 0;
+		background: $myLight;
+		line-height: 30px;
+	}
+	&__render{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item{
+		display: block;
+		margin: 5px;
+		position: relative;
+		transition: all .5s;
+		border-radius: 5px;
+		overflow: hidden;
+		&:after{
+			transition: all .5s;
+			content: '';
+			position: absolute;
+			display: block;
+			width: 200%;
+			height: 100%;
+			top: 0;
+			left: 0px;
+			background-image: linear-gradient(90deg, $accent 0%, lighten($accent, 10%) 45%, lighten($accent, 10%) 55%, darken($accent,10%) 100%);
+			z-index: -1;
+		}
+		&:hover{
+			&:after{
+				transition: all .5s;
+				content: '';
+				position: absolute;
+				display: block;
+				width: 200%;
+				height: 100%;
+				top: 0;
+				left: -100%;
+
+			}
+		}
+	}
+	&__linkItem{
+		color: $myDark;
+		display: block;
+		position: relative;
+		padding: 10px 20px;
+		border: 2px solid $myGray;
+		border-radius: 4px;
+		transition: all .3s;
+		&:hover{
+			transition: all .3s;
+			border: 2px solid $accent;
+			color: #fff;
+		}
+	}
+}
+
+
+
+
+// courses
+/*==================================================*/
+.courses{
+
+	&__item{
+		background: #fff;
+		border: 3px solid $myGray;	
+		text-align: center;
+		padding: 30px 20px;
+		margin: 10px;
+		border-radius: 5px;
+		transition: all .3s;	
+		&:hover{
+			transition: all .3s;	
+			box-shadow: 0 0 15px $myGray;
+			img{
+				transition: all .3s;	
+				transform: scale(1.1);
+			}
+		}
+	}
+	&__header{
+		color: $myDark;
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+	&__img{
+		transition: all .3s;	
+		width: 100%;
+		margin: 20px 0;
+		border: 1px solid $myDark;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	&__link{
+		margin: 20px 0 0 0;
+		display: inline-block;
+		padding: 5px 20px;
+		background: $myGray;
+		border: 2px solid $myDark;
+		color: $myLight;
+		border-radius: 3px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 100;
+		transition: all .3s;	
+		&:hover{
+			transition: all .3s;
+			background: $myLight;
+			border: 2px solid $myDark;
+			color: $myDark;
+		}
+	}
+}
+
+.owl-theme .owl-controls .owl-buttons div{
+	position: absolute;
+	z-index: 1000;
+	top: 30%;
+	font-size: 0;
+	transition: all .3s;
+	opacity: .2;
+	transform: scale(1.5);
+	&:hover{
+		transition: all .3s;
+		opacity: 0.5 !important;
+	}
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+	left: -100px;
+}
+.owl-theme .owl-controls .owl-buttons .owl-next{
+	right: -150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*3. FOOTER*/
 /*==================================================*/
@@ -728,148 +926,18 @@
 
 
 
-/*==================================================*/
-
-// devPanel
-
-/*==================================================*/
 
 
 
 
 
-// panelLink
-/*==================================================*/
-.panelLink{
-	height: 500px;
-	display: flex;
-	&__item{
-		background-size: cover;
-		background-position: center;
-		box-shadow: 0 0 3px 5px rgba(255,255,255,.3);
-		text-align: center;
-		flex: 1;
-		height: 500px;
-		text-shadow: 0 0 5px black;
-		font-size: 30px;
-		display: flex;
-		flex: 1 0 auto;
-		justify-content: start;
-		align-items: center;
-		flex-direction: column;
-		overflow: hidden;
-		cursor: pointer;
-		transition: 
-			font-size .7s cubic-bezier(.61, -.19, .7, -.11),
-			flex .7s cubic-bezier(.61, -.19, .7, -.11),
-			background .2s;
-		&_open{
-			flex: 5;
-			font-size: 40px;
-		}
-		&_prepare{
-			background-image: url('../img/devPanel/links/prepare.jpg');
-		}
-		&_design{
-			background-image: url('../img/devPanel/links/design.jpg');
-		}
-		&_html{
-			background-image: url('../img/devPanel/links/html.jpg');
-		}
-		&_css{
-			background-image: url('../img/devPanel/links/css.jpg');
-		}
-		&_js{
-			background-image: url('../img/devPanel/links/js.jpg');
-		}
-		&_wp{
-			background-image: url('../img/devPanel/links/wp.jpg');
-		}
-	}
-	&__header{
-		text-transform: uppercase;
-		color: red;
-		margin: 20px 0 0 0 ;
-	}
-}
 
 
 
-// courses
-/*==================================================*/
-.courses{
 
-	&__item{
-		background: #fff;
-		border: 3px solid $myGray;	
-		text-align: center;
-		padding: 30px 20px;
-		margin: 10px;
-		border-radius: 5px;
-		transition: all .3s;	
-		&:hover{
-			transition: all .3s;	
-			box-shadow: 0 0 15px $myGray;
-			img{
-				transition: all .3s;	
-				transform: scale(1.1);
-			}
-		}
-	}
-	&__header{
-		color: $myDark;
-		text-transform: uppercase;
-		font-size: 20px;
-	}
-	&__img{
-		transition: all .3s;	
-		width: 100%;
-		margin: 20px 0;
-		border: 1px solid $myDark;
-		padding: 10px;
-		box-sizing: border-box;
-	}
-	&__link{
-		margin: 20px 0 0 0;
-		display: inline-block;
-		padding: 5px 20px;
-		background: $myGray;
-		border: 2px solid $myDark;
-		color: $myLight;
-		border-radius: 3px;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		font-weight: 100;
-		transition: all .3s;	
-		&:hover{
-			transition: all .3s;
-			background: $myLight;
-			border: 2px solid $myDark;
-			color: $myDark;
-		}
-	}
-}
 
-.owl-theme .owl-controls .owl-buttons div{
-	position: absolute;
-	z-index: 1000;
-	top: 50%;
-	font-size: 0;
-	transition: all .3s;
-	opacity: .2;
-	&:hover{
-		transition: all .3s;
-		opacity: 0.5 !important;
-	}
-}
-.owl-theme .owl-controls .owl-buttons .owl-prev{
-	@extend .svg__lnr-chevron-left;
-	left: -50px;
-}
-.owl-theme .owl-controls .owl-buttons .owl-next{
-	@extend .svg__lnr-chevron-right;
-	right: -50px;
-}
+
+
 
 
 

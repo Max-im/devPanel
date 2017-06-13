@@ -8,6 +8,7 @@ const cheerio     	= require('gulp-cheerio');
 const replace 		= require('gulp-replace');
 const gulpIf 		= require('gulp-if');
 const debug 		= require('gulp-debug');
+const del 			= require('del');
 
 
 

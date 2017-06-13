@@ -36,6 +36,7 @@ module.exports = function(options){
 	  			'Opera >= 12',
 	  			'Safari >= 6'], { cascade: true }),
 			importCss(),
+			cssnano(),
 			rename('style.min.css'),
 			sourcemaps.write(),
 			gulp.dest('src/css'),

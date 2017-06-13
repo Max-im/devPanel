@@ -2,9 +2,6 @@
 
 const gulp          = require('gulp');
 const browserSync   = require('browser-sync');
-const uglify        = require('gulp-uglifyjs');
-const htmlMin       = require('gulp-htmlmin');
-const uncss         = require('gulp-uncss');
 
 
 
@@ -17,35 +14,6 @@ const uncss         = require('gulp-uncss');
    })
  }
 
-
-function myBuild() {
-
-  // FONTS
-  const buildFonts = gulp.src('src/fonts/**/*') 
-  .pipe(gulp.dest('dist/fonts'))
-
-  // CSS
-  const buildCss = gulp.src([ 'src/css/**/*.css'])
-  .pipe(uncss({
-    html: ['src/index.html']
-  }))
-  .pipe(gulp.dest('dist/css'))
-
-  // JavaScript
-  const buildJs = gulp.src('src/js/**/*.js')
-  .pipe(gulp.dest('dist/js'))
-
-  // HTML
-  const buildHtml = gulp.src('src/*.html')
-  .pipe(htmlMin({collapseWhitespace: true}))
-  .pipe(gulp.dest('dist'));
-
-  // JSON
-  const buildJSON = gulp.src('src/json/**/*.json')
-  .pipe(uglify())
-  .pipe(gulp.dest('dist/json'));
-
-}
 
 
 // -----------------------------------------------------------------------
@@ -87,6 +55,14 @@ lazyRequireTask('sprite:png', './tasks/sprite', { src: 'src/img/_sprite/*.png' }
 
 
 // -----------------------------------------------------------------------
+// clean:svg
+// -----------------------------------------------------------------------
+lazyRequireTask('clean:svg', './tasks/clean:svg');
+
+
+
+
+// -----------------------------------------------------------------------
 // sprite:svg
 // -----------------------------------------------------------------------
 lazyRequireTask('sprite:svg', './tasks/sprite:svg', { src: 'assets/sprite:svg/**/*.svg' });
@@ -97,11 +73,11 @@ lazyRequireTask('sprite:svg', './tasks/sprite:svg', { src: 'assets/sprite:svg/**
 // -----------------------------------------------------------------------
 // W A T C H
 // -----------------------------------------------------------------------
-gulp.task('watch', ['browser-sync', 'sprite:svg', 'sass', 'js' ], function() {
+gulp.task('watch', ['browser-sync',  'sprite:svg', 'sass', 'js' ], function() {
   gulp.watch('src/sass/**/*.scss', ['sass', browserSync.reload]);
   gulp.watch('src/*.html', browserSync.reload);
   gulp.watch('src/es6/**/*.js', ['js', browserSync.reload]);
-  gulp.watch('assets/sprite:svg/**/*.svg', ['sprite:svg', 'sass', browserSync.reload]);
+  gulp.watch('assets/sprite:svg/**/*.svg', ['clean:svg', 'sprite:svg', 'sass', browserSync.reload]);
 });
 
 
@@ -142,15 +118,41 @@ lazyRequireTask('clear', './tasks/clear');
 
 
 
-
 // B U I L D
 // =======================================================================
-lazyRequireTask('clear', './tasks/clear');
+gulp.task('build', ['clean', 'img', 'buildHTML', 'buildCSS', 'buildJS',  'buildJSON', 'buildFONTS' ] );
+
+
+// -----------------------------------------------------------------------
+// buildHTML
+// -----------------------------------------------------------------------
+lazyRequireTask('buildHTML', './tasks/buildHTML', { src: 'src/*.html'});
+
+// -----------------------------------------------------------------------
+// buildCSS
+// -----------------------------------------------------------------------
+lazyRequireTask('buildCSS', './tasks/buildCSS', { src: 'src/css/**/*.*'});
+
+// -----------------------------------------------------------------------
+// buildJS
+// -----------------------------------------------------------------------
+lazyRequireTask('buildJS', './tasks/buildJS', { src: 'src/js/**/*.*'});
+
+
+// -----------------------------------------------------------------------
+// buildJSON
+// -----------------------------------------------------------------------
+lazyRequireTask('buildJSON', './tasks/buildJSON', { src: 'src/json/**/*.*'});
+
+
+// -----------------------------------------------------------------------
+// buildFONTS
+// -----------------------------------------------------------------------
+lazyRequireTask('buildFONTS', './tasks/buildFONTS', { src: 'src/fonts/**/*.*'});
 
 
 
-gulp.task('build', ['clean', 'img', 'sass' ,'js'], myBuild);
-// gulp.task('build',  );
+
 
 
 

@@ -1,7 +1,7 @@
 const header 		= require('./header.es6.js');
 const devPanel 		= require('./devPanel.es6.js');
 const dp_cours_jsx 	= require('./devPanel_carousel.jsx.js');
-const dp_cours 		= require('./devPanel_carousel.es6.js');
+const dp_links_jsx 	= require('./devPanel_links.jsx.js');
 // const main		= require('./main.es6.js');
 
 
@@ -12,6 +12,9 @@ window.$ = window.jQuery = jQuery;
 // owl-carousel
 require('../../node_modules/owlcarousel/owl-carousel/owl.carousel.min.js');
 
+// react-bootstrap
+import { Button } from 'react-bootstrap';
+ 
 
 // React
 const React 	= require('react');
@@ -37,7 +40,8 @@ header(jQuery, mustache, mixitup);
 
 devPanel(jQuery);
 
+dp_links_jsx(React, ReactDOM, React.Component, jQuery);
+
 dp_cours_jsx(React, ReactDOM, React.Component, jQuery);
 
-dp_cours(jQuery);
 

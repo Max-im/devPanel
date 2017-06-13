@@ -10,6 +10,11 @@ module.exports = function(React, ReactDOM, Component, $) {
 			array.push(...data);
 
 			reactStart(array);
+			$('.courses').owlCarousel({
+				items: 5,
+				pagination: false,
+				navigation: true
+			});
 		})
 
 	function reactStart(arr){

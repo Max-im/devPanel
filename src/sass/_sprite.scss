@@ -1,20 +1,18 @@
 %svg-common {
-	background: url("../img/svg/sprite-291c5890.svg") no-repeat;
-	display: block;
-	transform: scale(5);
+	background: url("../img/svg/sprite-8a2e20ce.svg") no-repeat;
 }
 
-.svg__lnr-chevron-left {
+.svg__noun_839197_cc {
 	@extend %svg-common;
 	background-position: 0 0;
-	width: 0px;
-	height: 16px;
+	width: 100px;
+	height: 125px;
 }
 
-.svg__lnr-chevron-right {
+.svg__noun_839200_cc {
 	@extend %svg-common;
 	background-position: 0 100%;
-	width: 0px;
-	height: 14px;
+	width: 100px;
+	height: 125px;
 }
 
