@@ -80,7 +80,7 @@ module.exports = function($, Mustache, mixitup) {
 	/*5. FUNCTIONS*/
 	/*==================================================*/
 	function popupListInit(e){
-		e.preventDefault();
+		// e.preventDefault();
 		let elem = $(this).attr('href');
 		let textDuties = $(elem).find('.popupDuties').text();
 		let target = $(elem).find('.dutiesWrap');

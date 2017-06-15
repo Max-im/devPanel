@@ -1,8 +1,4 @@
 const header 		= require('./header.es6.js');
-const devPanel 		= require('./devPanel.es6.js');
-const dp_cours_jsx 	= require('./devPanel_carousel.jsx.js');
-const dp_links_jsx 	= require('./devPanel_links.jsx.js');
-// const main		= require('./main.es6.js');
 
 
 // jQuery
@@ -38,10 +34,5 @@ const mixitup = require('mixitup');
 
 header(jQuery, mustache, mixitup);
 
-devPanel(jQuery);
-
-dp_links_jsx(React, ReactDOM, React.Component, jQuery);
-
-dp_cours_jsx(React, ReactDOM, React.Component, jQuery);
 
 

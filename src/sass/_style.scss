@@ -36,6 +36,12 @@
 .topLine{
 	background: $myDark;
 	font-size: 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	z-index: 100;
 	&__wrap{
 		display: inline-block;
 		width: 50%;
@@ -78,7 +84,7 @@
 	&__socLink{
 		font-size: 20px;
 		color: $myGray;
-		padding: 10px;
+		padding: 15px 10px;
 		display: block;
 		transition: all .3s;
 		&:hover{
@@ -101,7 +107,8 @@
 	position: relative;
 	text-align: center;
 	background-color: #070707;
-	height: calc(100vh - 50px);
+	height: 100vh;
+	margin: 50px 0 0 0;
 	&:hover{
 		.slider__img{
 			transition: all .6s;
@@ -951,9 +958,9 @@
 	border: 3px solid $myDark;
 	border-radius: 5px;
 	color: $myLight;
-	padding: 20px;
-	box-sizing: border-box;
+	// box-sizing: border-box;
 }
+
 
 .fancybox-overlay{
 	background: rgba(0,0,0,.8);
